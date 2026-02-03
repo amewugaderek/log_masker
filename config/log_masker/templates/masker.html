@@ -29,10 +29,9 @@
         <div class="mt-5 card p-4 border-success">
             <h4 class="text-success">Masked Output</h4>
             <pre class="bg-light text-Dark p-3 mt-2"><code>{{ masked_log }}</code></pre>
-            <button class="btn btn-sm btn-outline-secondary"
-                onclick="navigator.clipboard.writeText(`{{ masked_log|escapejs }}`)">
-                Copy to Clipboard
-            </button>
+            <div class="mb-3 d-flex gap-2">
+                <button type="button" class="btn btn-outline-primary" onclick="navigator.clipboard.writeText(`{{ masked_log|escapejs }}`)">Copy to Clipboard</button>
+            </div>
         </div>
         {% endif %}
     </div>
